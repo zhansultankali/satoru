@@ -54,7 +54,7 @@ export default function App() {
           lastIdRef.current = u.update_id + 1
           const m = u.message
           if (!m || String(m.chat.id) !== String(cid)) continue
-          if (m.from?.is_bot) { setTyping(false); addMsg(m.text || "[медиа]", "bot") }
+          if (String(m.chat.id) === String(cid)) { setTyping(false); addMsg(m.text || "[медиа]", "bot") }
         }
       } catch {}
     }, 2000)
