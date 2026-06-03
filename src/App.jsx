@@ -58,7 +58,7 @@ export default function App() {
           addMsg(m.text || "[медиа]", "bot")
         }
       } catch {}
-    }, 2000)
+    }, 5000)
   }
 
   async function doSend(text) {
